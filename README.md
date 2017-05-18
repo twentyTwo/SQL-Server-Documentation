@@ -14,7 +14,7 @@
 - Tally
 - GROUP_CONCAT
 - PARSENAME
-**ParseName** Splits a string by a [.] (DOT)
+**ParseName** : Splits a string by a [.] (DOT)
   * Example 1
    ```sql
    Declare @ObjectName nVarChar(1000) 
