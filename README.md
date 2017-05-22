@@ -2,6 +2,8 @@
 
 ## Documentation of the below topics
 - STUFF
+  > * Syntax
+  > STUFF(string_expression , start, length, string_expression2)
 - LEAD / LAG
 - XML PATH
 - COALESCE
