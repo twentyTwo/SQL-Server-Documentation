@@ -4,6 +4,9 @@
 - STUFF
   > * Syntax
   > STUFF(string_expression , start, length, string_expression2)
+  * Example :
+  ```SELECT STUFF('TechOnTheNet.com', 1, 12, 'CheckYourMath')```
+  > Output: 'CheckYourMath.com'
 - LEAD / LAG
 - XML PATH
 - COALESCE
