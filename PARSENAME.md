@@ -19,3 +19,5 @@
    DECLARE @TestString AS VARCHAR (200) = '_999_123456_8888888-123564578'; 
    SELECT PARSENAME(REPLACE(@TestString, '_', '.'), 2)
    ```
+   
+   > Output: 12345
