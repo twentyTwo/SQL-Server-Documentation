@@ -15,3 +15,6 @@
 - GROUP_CONCAT
 - [PARSENAME](PARSENAME.md)
 - OUTER APPLY
+
+## Some advance important queries
+- [Foreign keys for a specific table](foreignKeysForATable.md)
