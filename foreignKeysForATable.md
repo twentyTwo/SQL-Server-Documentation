@@ -1,4 +1,4 @@
-```
+```sql
 SELECT 
     f.name AS ForeignKey,
     OBJECT_NAME(f.parent_object_id) AS TableName,
