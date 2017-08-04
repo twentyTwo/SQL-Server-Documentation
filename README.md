@@ -17,4 +17,5 @@
 - OUTER APPLY
 
 ## Some advance important queries
-- [Foreign keys for a specific table](foreignKeysForATable.md)
+- [All foreign keys for a specific table](foreignKeysForATable.md)
+- [Find a string across database](findStringAcrossDatabase.md)
