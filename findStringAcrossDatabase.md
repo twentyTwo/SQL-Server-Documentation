@@ -16,22 +16,23 @@ FETCH NEXT FROM tables_cur INTO @table_name, @table_id
 
 WHILE (@@FETCH_STATUS = 0)
 BEGIN
-DECLARE columns_cur CURSOR FOR SELECT name FROM sys.columns WHERE object_id = @table_id AND system_type_id IN (167, 175, 231, 239)
+    DECLARE columns_cur CURSOR FOR SELECT name FROM sys.columns WHERE object_id = @table_id 
+        AND system_type_id IN (167, 175, 231, 239)
 
-OPEN columns_cur
-
-FETCH NEXT FROM columns_cur INTO @column_name
-WHILE (@@FETCH_STATUS = 0)
-BEGIN
-    SET @sql_string = 'IF EXISTS (SELECT * FROM ' + @table_name + ' WHERE [' + @column_name + '] 
-    LIKE ''%' + @search_string + '%'') PRINT ''' + @table_name + ', ' + @column_name + ''''
-
-    EXECUTE(@sql_string)
+    OPEN columns_cur
 
     FETCH NEXT FROM columns_cur INTO @column_name
-END
+        WHILE (@@FETCH_STATUS = 0)
+        BEGIN
+            SET @sql_string = 'IF EXISTS (SELECT * FROM ' + @table_name + ' WHERE [' + @column_name + '] 
+            LIKE ''%' + @search_string + '%'') PRINT ''' + @table_name + ', ' + @column_name + ''''
 
-CLOSE columns_cur
+            EXECUTE(@sql_string)
+
+        FETCH NEXT FROM columns_cur INTO @column_name
+        END
+
+    CLOSE columns_cur
 
 DEALLOCATE columns_cur
 
