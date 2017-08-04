@@ -38,4 +38,7 @@ DEALLOCATE columns_cur
 
 FETCH NEXT FROM tables_cur INTO @table_name, @table_id
 END
+
+CLOSE tables_cur
+DEALLOCATE tables_cur
 ```
