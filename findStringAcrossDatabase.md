@@ -23,7 +23,8 @@ OPEN columns_cur
 FETCH NEXT FROM columns_cur INTO @column_name
 WHILE (@@FETCH_STATUS = 0)
 BEGIN
-    SET @sql_string = 'IF EXISTS (SELECT * FROM ' + @table_name + ' WHERE [' + @column_name + '] LIKE ''%' + @search_string + '%'') PRINT ''' + @table_name + ', ' + @column_name + ''''
+    SET @sql_string = 'IF EXISTS (SELECT * FROM ' + @table_name + ' WHERE [' + @column_name + '] 
+    LIKE ''%' + @search_string + '%'') PRINT ''' + @table_name + ', ' + @column_name + ''''
 
     EXECUTE(@sql_string)
 
