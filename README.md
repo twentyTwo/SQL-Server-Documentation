@@ -3,8 +3,8 @@
 ## Documentation of the below topics
 - COALESCE
 - CTE
-- FOR XML
-  - FOR XML RAW
+- FOR XML&nbsp;&nbsp;:&nbsp;Lets you retrieve data as XML
+  - [FOR XML RAW](forXmlRaw.md)
   - FOR XML AUTO
   - FOR XML EXPLICIT
   - FOR XML PATH
